@@ -12,27 +12,27 @@ How to get a before and after:
 
 ```xml
 <Operation Class="PatchOperationSequence">
-  <success>Always</success>
-  <operations>
-    <li Class="PatchOperationWhatHappened.Log">
-      <xpath>Defs/WorldObjectDef[defName="Caravan"]</xpath>
-      </li>
-      <li Class="PatchOperationAdd">
-        <xpath>/Defs/WorldObjectDef[defName="Caravan"]/comps</xpath>
-          <value>
-            <li>
-              <compClass>MyNameSpace.MyClass</compClass>
-            </li>
-          </value>
-      </li>
-      <li Class="PatchOperationWhatHappened.Log">
-        <xpath>Defs/WorldObjectDef[defName="Caravan"]</xpath>
-      </li>
-  </operations>
+    <success>Always</success>
+    <operations>
+        <li Class="PatchOperationWhatHappened.Log">
+            <xpath>Defs/WorldObjectDef[defName="Caravan"]</xpath>
+        </li>
+        <li Class="PatchOperationAdd">
+            <xpath>/Defs/WorldObjectDef[defName="Caravan"]/comps</xpath>
+            <value>
+                <li>
+                    <compClass>MyNameSpace.MyClass</compClass>
+                </li>
+            </value>
+        </li>
+        <li Class="PatchOperationWhatHappened.Log">
+            <xpath>Defs/WorldObjectDef[defName="Caravan"]</xpath>
+        </li>
+    </operations>
 </Operation>
 ```
 
-### Output
+### Sample Output
 
 [HugsLib log](https://gist.github.com/HugsLibRecordKeeper/6654e57cc1b1af50a8bb462d2522e2ff#file-output_log-txt-L55-L57)
 
