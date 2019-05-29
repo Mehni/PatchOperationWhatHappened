@@ -40,4 +40,4 @@ How to get a before and after:
 
 - It's wise to PatchOperationWhatHappened.Log one level higher for a better overview.
 - Patching multiple things with `Defs/ThingDef[defName="FOO" or defName="BAR"]` in one operation may result in confusing (but correct) output. The different XML nodes each get logged individually.
-- Put the logged message in a good text editor with XML syntax highlighting. I also recommend to auto-format it as XML.
+- Put the logged message in a good text editor with XML syntax highlighting.
