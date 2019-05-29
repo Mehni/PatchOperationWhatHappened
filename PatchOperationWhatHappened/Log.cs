@@ -2,7 +2,9 @@
 namespace PatchOperationWhatHappened
 {
     using System;
+    using System.Text;
     using System.Xml;
+    using System.Xml.Linq;
     using Verse;
 
     public class Log : PatchOperationPathed
@@ -13,8 +15,12 @@ namespace PatchOperationWhatHappened
             {
                 foreach (var current in xml.SelectNodes(xpath))
                 {
-                    XmlNode xmlNode = current as XmlNode;
-                    Verse.Log.Message(xmlNode?.OuterXml);
+                    XElement element = XElement.Parse((current as XmlNode) .OuterXml);
+                    StringBuilder sb = new StringBuilder();
+                    using (XmlWriter writer = XmlWriter.Create(sb, new XmlWriterSettings { OmitXmlDeclaration = true, Indent = true }))
+                        element.Save(writer);
+                    sb.Insert(0, $"{xpath}\n\n");
+                    Verse.Log.Message(sb.ToString());
                 }
             }
             catch (Exception ex)
