@@ -34,7 +34,7 @@ How to get a before and after:
 
 ### Sample Output
 
-[HugsLib log](https://gist.github.com/HugsLibRecordKeeper/6654e57cc1b1af50a8bb462d2522e2ff#file-output_log-txt-L55-L57)
+[HugsLib log](https://gist.github.com/HugsLibRecordKeeper/1cc22ac145adeb28836a534c9e28cdf6#file-output_log-txt-L180-L204)
 
 ## Tips
 
